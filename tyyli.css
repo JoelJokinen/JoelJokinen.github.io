@@ -1,0 +1,287 @@
+body {
+    color: #ffffff;
+    background-color:#D2B48C;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    margin: 0; /*selain luo automaattisesti pienen marginaalin*/
+}
+header{
+    text-align: center;
+    padding-top: 30px;
+}
+.logo img {
+    height: 80px;   /* vaihda logon kokoa*/
+    display: block;
+    margin-left: 10px;   /* työntää logoa*/
+    margin-top: -20px; 
+}
+
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.alisivu-sisalto {
+    background-color: rgb(255, 248, 239);
+    display:flex;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+/* fontit yms */
+h1, h2, h3, .esittely {
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(0, 97, 34);
+    text-align: center;
+    padding-top: 30px;
+}
+h2 {
+    text-align: left;      /* Teksti vasempaan reunaan */
+    width: 60%;            /* Vie 60 % tilasta */
+    margin-left: 4%;     /* Keskittää leveydeltään 60 %:n alueen */
+    margin-right: auto;    /* Keskittää leveydeltään 60 %:n alueen */
+}
+.esittely {
+    padding-left: 20px; 
+header, header nav, header h1, header h2, header h3 {
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-weight: normal;  /* or bold if you want emphasis */
+    line-height: 1.2;     /* improves readability */
+    letter-spacing: 0.5px; /* optional, for slight spacing */
+}
+}
+/*päävalikko*/
+
+header nav {
+    text-align: center;
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+nav a {
+    background: rgb(122, 74, 3);
+    font-family: otsikko, sans-serif;
+    color:whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid rgb(87, 54, 4);
+    width: 130px;
+    text-align: center;
+    
+}
+header nav a:hover {
+    color: rgb(87, 54, 4);
+    background-color: whitesmoke;
+}
+#valittu {
+    color: rgb(87, 54, 4);
+    background-color:rgba(255, 235, 205, 0.6);
+}
+
+.toimintakehote {
+    border: 2px solid rgb(87, 54, 4);
+    border-radius: 10px;
+    background-color: whitesmoke;
+    font-family: otsikko, "sans serif";
+    color: rgb(87, 54, 4);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/*alatunniste, joka sivulla sama, liimataan sivun phjaan kiinni*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* pushes footer to the bottom */
+}
+
+footer {
+    font-family: otsikko, "sans serif";
+    font-size: 22px;
+    color: rgba(87, 54, 4);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+
+
+
+
+
+
+/*mobiilikoko*/
+@media (max-width: 600px) {
+    #etusivu {
+        background-image: url(kuvat/paakuva-kahvila-mobiili.jpg);
+        background-size: cover;
+        height: 400px;
+    }
+    #alisivut {
+        background-image: url(kuvat/tausta-mobiili.jpg);
+    }
+
+    nav a { 
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+        padding: 7px;
+        margin:3px 5px;
+    }
+    #slogan {
+        font-size: 30px;
+        padding: 20px;
+    }
+    .toimintakehote {
+        font-size: 18px;
+    }
+    .sisalto {
+        margin: 3% 10% 3% 10%;
+    }
+    .alisivu-sisalto {
+        margin: 3% 10% 3% 10%;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .esittely {
+        font-size: 18px;  
+    }
+    #paasivu {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #kahvimme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #musamme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    .grid-yritys {
+        grid-template-areas:
+            'g1-h1'
+            'g2-hk1'
+            'g3-h2'
+            'g4-hk2';
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/*suuri näyttö*/
+@media screen and (min-width: 1200px) {
+    #etusivu {
+        background-image: url(kuvat/paakuva-kahvila.jpg);
+        background-size: cover;
+        height: 950px;
+    }
+    #alisivut {
+        background-image: url(kuvat/tausta.jpg);
+    }
+    nav a { 
+        font-size: 20px;
+        width: 130px;
+        height: 25px;
+        padding: 10px;
+        margin:5px 20px;
+    }
+    
+    #slogan {
+        font-size: 65px;
+        padding-top: 150px;
+        padding-bottom: 20px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .toimintakehote {
+        font-size: 30px;
+    }
+    .sisalto {
+        margin: 3% 15% 3% 15%;
+    }
+    .alisivu-sisalto {
+        margin: 3% 15% 3% 15%;
+        flex-direction: row;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    .esittely {
+        font-size: 25px;  
+    }
+
+    #paasivu {
+        grid-template-areas:
+            'g1 g1 g3'
+            'g2 g2 g3';
+        margin-bottom: 100px;
+    }
+    #kahvimme {
+        grid-template-areas:
+            'g3 g1 g1'
+            'g3 g2 g2';
+        margin-bottom: 50px;
+    }
+    #musamme {
+        grid-template-areas:
+            'g1 g3 g2';
+        margin-bottom: 50px;
+    }
+    .grid-yritys {
+        grid-template-areas:
+            'g1-h1 g1-h1 g2-hk1'
+            'g4-hk2 g3-h2 g3-h2';
+        margin-bottom: 50px;
+    }
+    footer{
+        flex-direction: row;
+        text-align: left;
+        bottom: 0;
+        width: 100%;
+        max-height: 15%;
+    }}
